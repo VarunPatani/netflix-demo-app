@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo "Building Docker image..."
                 script {
-                    sh "docker build -t ${IMAGE_NAME}:${IMAGE_TAG} ."
+                    bat "docker build -t %IMAGE_NAME%:%IMAGE_TAG% ."
                 }
             }
         }
@@ -26,25 +26,14 @@ pipeline {
         stage('✅ Run Tests') {
             steps {
                 echo "Running tests (simulated)..."
-                // Replace with actual test command if you have one
-                sh "echo All tests passed!"
+                bat "echo All tests passed!"
             }
         }
 
-        stage('📤 Push to Registry (Optional)') {
-            when {
-                expression { return false } // set to true if you're using Docker Hub
-            }
+        stage('🚀 Trigger Deploy (Simulated)') {
             steps {
-                echo "Pushing image to Docker registry..."
-                // Example: docker push your-dockerhub-user/${IMAGE_NAME}:${IMAGE_TAG}
-            }
-        }
-
-        stage('🚀 Trigger Deploy (Spinnaker or Simulated)') {
-            steps {
-                echo "Triggering deployment..."
-                // Simulate trigger or add webhook to Spinnaker here
+                echo "Triggering deployment (placeholder)..."
+                bat "echo Deployment triggered!"
             }
         }
     }
