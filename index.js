@@ -28,14 +28,14 @@ app.get('/', (req, res) => {
             }
             
             body {
-                background-color: #000;
-                color: #fff;
+                background-color: #fff;
+                color: #000;
             }
             
             .container {
                 width: 100%;
                 min-height: 100vh;
-                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                //background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
                             url('https://assets.nflxext.com/ffe/siteui/vlv3/f1c3c4eb-2fea-42c7-9ebd-1c093bd8a69d/9c9af369-7a8c-4c8f-8e4a-d6c9d655f713/IN-en-20230403-popsignuptwoweeks-perspective_alpha_website_large.jpg');
                 background-size: cover;
                 background-position: center;
